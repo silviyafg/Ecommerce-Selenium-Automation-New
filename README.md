@@ -92,7 +92,7 @@ Make sure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YourUsername/Ecommerce-Selenium-Automation.git
+git clone https://github.com/Silviya/Ecommerce-Selenium-Automation_new.git
 cd Ecommerce-Selenium-Automation
 ```
 
