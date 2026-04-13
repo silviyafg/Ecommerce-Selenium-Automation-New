@@ -70,8 +70,8 @@ public class Ecommerce {
 
     @When("User clicks on the first product in the search results")
     public void user_clicks_on_the_first_product_in_the_search_results() {
-        WebElement firstProduct = driver.findElement(By.xpath("//div[@class='productinfo text-center']//a"));
-        firstProduct.click();
+        ecommercePages.clickonOnAddProductsButton();
+
     }
 
     @Then("User validates that the product details page is displayed successfully")

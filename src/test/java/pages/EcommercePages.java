@@ -2,6 +2,7 @@ package pages;
 import Utils.ElementsUtil;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -34,6 +35,11 @@ public class EcommercePages {
     private By searchProduct = By.xpath("//input[@id='search_product']");
     private By clickonSearchIcon = By.xpath("//i[@class='fa fa-search']");
     private By searchText = By.xpath("//h2[text()='Searched Products']");
+    private By clickAddProductsButton = By.xpath("//a[text()='View Product'][1]");
+    private By addToCartButton = By.xpath("//button[normalize-space()='Add to cart']");
+
+
+
 
 
     public void clickLoginButton() {
@@ -59,6 +65,13 @@ public class EcommercePages {
         return elementsUtil.isDisplayed(logout);
     }
 
+    public void clickonProductsButton() {
+        elementsUtil.click(productsButton);
+        Assert.assertTrue(elementsUtil.isDisplayed(productsButton));
+
+
+    }
+
     public void performValidationOfText() {
         Assert.assertTrue(elementsUtil.isDisplayed(automationText));
         Assert.assertTrue(elementsUtil.isDisplayed(categoryOnHomePage));
@@ -66,26 +79,18 @@ public class EcommercePages {
 
     }
 
-    public void clickonProductsButton() {
-        elementsUtil.click(productsButton);
+    public void clickonOnAddProductsButton() {
+        elementsUtil.click(clickAddProductsButton);
+            Assert.assertTrue(elementsUtil.isDisplayed(clickAddProductsButton));
+
+
     }
 
     public void performValidationOnSearch() {
 
         {
-            new WebDriverWait(driver, Duration.ofSeconds(15))
-                    .until(ExpectedConditions.urlContains("products"));
-            System.out.println("=== DEBUG INFO ===");
-            System.out.println("URL   : " + driver.getCurrentUrl());
-            System.out.println("Title : " + driver.getTitle());
-            List<WebElement> searchFields = driver.findElements(By.id("search_product"));
-            System.out.println("Search fields found: " + searchFields.size());
-            List<WebElement> byName = driver.findElements(By.name("search"));
-            System.out.println("By name='search' found: " + byName.size());
-            System.out.println("==================");
-            elementsUtil.closeAdIfPresent();
-            elementsUtil.removeAds();
-            elementsUtil.scrollIntoView(searchProduct);
+
+            elementsUtil.click(searchProduct);
             elementsUtil.type(searchProduct, "dress");
             elementsUtil.click(clickonSearchIcon);
         }
