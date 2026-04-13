@@ -66,7 +66,7 @@ Feature: Ecommerce End to End Happy Path
     And User performs validates the congratulations page is displayed successfully
 
   # ── Full E2E ────────────────────────────────────────────
-  @E2E @FullFlow
+  @E2E @FullFlow@Smoke
   Scenario: User completes full end to end purchase flow
     Given I am on the landing page of the e-commerce website
     When User clicks on the "Login button"
