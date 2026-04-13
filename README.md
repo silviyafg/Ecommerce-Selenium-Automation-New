@@ -282,8 +282,8 @@ Reusable methods available:
 ## 👨‍💻 Author
 
   Silviya 
-- GitHub: https://github.com/YourUsername
-- LinkedIn: https://linkedin.com/in/YourProfile
+- GitHub:[https://github.com/silviyafg/Ecommerce-Selenium-Automation-New/]
+- LinkedIn: [https://linkedin.com/in/YourProfile](https://www.linkedin.com/in/silviya-gonsalves-b0b00aa4/)
 
 ---
 
